@@ -1,8 +1,8 @@
+/* eslint-disable import/no-anonymous-default-export */
 /**
- * Generates a number between min and max.
  * @param {number} min
  * @param {number} max
  */
 export default (min, max) => {
-    return Math.floor(Math.random() * max) + min;
-  };  
+  return Math.floor(Math.random() * max) + min;
+};
