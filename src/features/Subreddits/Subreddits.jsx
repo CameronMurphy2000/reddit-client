@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Card from '../../components.Card/Card';
+import Card from '../../components/Card/Card';
 import { fetchSubreddits, selectSubreddits } from '../../store/subRedditSlice';
 import './Subreddits.css';
 import {
-    setSelectedSubreddit,
-    selectSelectedSubreddit,
+  setSelectedSubreddit,
+  selectSelectedSubreddit,
 } from '../../store/redditSlice';
 
 const Subreddits = () => {

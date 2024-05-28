@@ -104,7 +104,7 @@ export const fetchComments = (index, permalink) => async (dispatch) => {
 
 const selectPosts = (state) => state.reddit.posts;
 const selectSearchTerm = (state) => state.reddit.searchTerm;
-export const selectSeclectedSubreddit = (state) =>
+export const selectSelectedSubreddit = (state) =>
     state.reddit.selectedSubreddit;
 
 export const selectFilteredPosts = createSelector(

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HiOutlineSearch } from 'react-icons/hi';
 import './Header.css';
-import { FaReddit } from 'readt-icons/fa';
+import { FaReddit } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSearchTerm } from '../../store/redditSlice';
 
