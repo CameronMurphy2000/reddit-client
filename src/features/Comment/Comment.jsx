@@ -6,16 +6,17 @@ import Avatar from '../Avatar/Avatar';
 
 const Comment = (props) => {
     const { comment } = props;
+    console.log(comment);
     return (
         <div className="comment">
             <div className="comment-metadata">
                 <Avatar name={comment.author} />
                 <p className="comment-author">{comment.author}</p>
                 <p className="comment-created-time">
-                    {moment.unix(comment.creted_utc).fromNow()}
+                    {moment.unix(comment.created_utc).fromNow()}
                 </p>
             </div>
-            <ReactMarkdown source={comment.body} />
+            <ReactMarkdown>{comment.body}</ReactMarkdown>
         </div>
     );
 };

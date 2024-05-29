@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { AnimatedList } from 'react-animated-list';
+import { motion } from 'framer-motion';
 import Post from '../Post/Post';
 import PostLoading from '../Post/PostLoading';
 import getRandomNumber from '../../utils/getRandomNumber';
@@ -30,13 +30,19 @@ const Home = () => {
       return getComments;
     };
 
+
     if (isLoading) {
-    return (
-        <AnimatedList animation="zoom">
-               {Array(getRandomNumber(3, 10)).fill(<PostLoading />)}
-        </AnimatedList>
-    );
-    }
+        return (
+          <div>
+            {Array.from({ length: getRandomNumber(3, 10) }).map((_, index) => (
+              <motion.div key={index} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                <PostLoading />
+              </motion.div>
+            ))}
+          </div>
+        );
+      }
+    
 
     if (error) {
     return (

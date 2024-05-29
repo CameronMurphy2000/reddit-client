@@ -25,7 +25,7 @@ const Header = () => {
 
     return (
         <header>
-            <div classname="logo">
+            <div className="logo">
                 <FaReddit className="logo-icon" />
                 <p>
                     Reddit<span>Client</span>
