@@ -22,14 +22,13 @@ const Home = () => {
       dispatch(fetchPosts(selectedSubreddit));
     }, [dispatch, selectedSubreddit]);
   
-    const onToggleComments = (index) => {
-      const getComments = (permalink) => {
-        dispatch(fetchComments(index, permalink));
+    const onToggleComments = (index) => {      
+      const getComments = (permalink) => {         
+          dispatch(fetchComments(index, permalink));
       };
-  
-      return getComments;
-    };
 
+      return getComments;
+  };
 
     if (isLoading) {
         return (

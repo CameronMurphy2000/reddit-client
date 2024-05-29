@@ -6,7 +6,6 @@ import Avatar from '../Avatar/Avatar';
 
 const Comment = (props) => {
     const { comment } = props;
-    console.log(comment);
     return (
         <div className="comment">
             <div className="comment-metadata">

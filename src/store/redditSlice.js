@@ -40,21 +40,26 @@ const redditSlice = createSlice({
               .showingComments;
         },
         startGetComments(state, action) {
-            state.posts[action.payload].showingComments = !state.posts[action.payload]
-              .showingComments;
-            if (!state.posts[action.payload].showingComments) {
+            const post = state.posts[action.payload];
+            post.showingComments = !post.showingComments;
+            
+            if (!post.showingComments) {
                 return;
             }
-            state.posts[action.payload].loadingComments = true;
-            state.posts[action.payload].error = false;
+            
+            post.loadingComments = true;
+            post.errorComments = false;
         },
         getCommentsSuccess(state, action) {
-            state.posts[action.payload].loadingComments = false;
-            state.posts[action.payload].comments = action.payload.comments;
+            const { index, comments } = action.payload;
+            const post = state.posts[index];
+            post.loadingComments = false;
+            post.comments = comments;
         },
         getCommentsFailed(state, action) {
-            state.posts[action.payload].loadingComments = false;
-            state.posts[action.payload].error = true;
+            const post = state.posts[action.payload];           
+            post.loadingComments = false;
+            post.errorComments = true;
         },
     },
 });
