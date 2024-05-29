@@ -1,0 +1,43 @@
+:root {
+    --color-background: #1D1D1D;
+    --color-background-secondary: #1B1B1B;
+    --color-foreground: #D9D9D9;
+    --color-border: #8083FF;
+    --color-text-header: #1d121d;
+    --color-text-body: #000000;
+    --color-text-secondary: #2C2C2C;
+    --color-text-invert: #FFFFFF;
+    --color-text-link: ;
+    --color-branding: #8083FF;
+    --color-branding-transparent: #5558ff;
+
+    --color-alert: #ff304f;
+    --color-success: #45b81f;
+    --color-on-hover: #0000000f;
+
+
+    --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    --box-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+
+      --spacing-0: 4px;
+      --spacing-1: 8px;
+      --spacing-2: 16px;
+      --spacing-3: 24px;
+      --spacing-4: 36px;
+      --spacing-5: 64px;
+
+      --radius: 4px;
+      --radius-2: 8px;
+}
+
+html,
+body {
+    background: var(--color-background);
+    color: var(--color-text-body);
+}
+
+p {
+    margin: 0;
+}
